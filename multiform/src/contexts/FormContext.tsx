@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useContext, useReducer } from "react";
 import { createContext } from "vm";
 
 const initialData = {
@@ -49,3 +49,11 @@ const FormProvider = ({children}) => {
     );
 }
 
+// Context Hook
+const useForm = () => {
+    const context = useContext(FormContext);
+    if(context === undefined) {
+        throw new Error('useForm precisa ser usado dentro do FormProvider');
+    };
+    return context;
+}
