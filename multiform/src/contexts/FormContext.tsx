@@ -1,8 +1,18 @@
+import { useReducer } from "react";
 import { createContext } from "vm";
 
+const initialData = {
+    currentStep: 0,
+    name: '',
+    level: 0,
+    email: '',
+    github: ''
+}
 
+// Context
 const FormContext = createContext(undefined);
 
+// Reducer
 enum FormActions {
     setCurrentStep,
     setName,
@@ -26,3 +36,16 @@ const FormReducer = (state, action) => {
             return state;
     }
 } 
+
+// Provider
+const FormProvider = ({children}) => {
+    const [state, dispatch] = useReducer( FormReducer, initialData )
+    const value = { state, dispatch }
+
+    return (
+        <FormContext.Provider value={value}>
+            {children}
+        </FormContext.Provider>
+    );
+}
+
