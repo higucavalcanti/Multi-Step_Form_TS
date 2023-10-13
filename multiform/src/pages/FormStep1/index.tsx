@@ -16,7 +16,11 @@ export const FormStep1 = () => {
   }, []);
   
   const handleNextStep = () => {
-    navigate('/page2');
+    if(state.name !== '') {
+        navigate('/page2');
+    } else {
+        alert("Preencha os dados");
+    }
   };
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
