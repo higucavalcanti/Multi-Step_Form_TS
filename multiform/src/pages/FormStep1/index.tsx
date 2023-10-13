@@ -1,11 +1,13 @@
-import { Theme } from "../../components/Theme";
-import * as C from "./styles";
+import { useNavigate } from 'react-router-dom';
+import * as C from './styles';
+import { Theme } from '../../components/Theme';
 
 export const FormStep1 = () => {
+  const navigate = useNavigate();
 
-    const handleNextStep = () => {
-        
-    }
+  const handleNextStep = () => {
+    navigate('/page2');
+  };
 
     return (
         <Theme>
@@ -28,4 +30,4 @@ export const FormStep1 = () => {
             </C.Container>
         </Theme>
     );
-}
+};

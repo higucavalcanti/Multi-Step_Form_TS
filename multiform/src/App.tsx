@@ -12,8 +12,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<FormStep1 />} />
-          <Route path='/step2' element={<FormStep2 />} />
-          <Route path='/ste33' element={<FormStep3 />} />
+          <Route path='/page2' element={<FormStep2 />} />
+          <Route path='/page3' element={<FormStep3 />} />
         </Routes>
       </BrowserRouter>
     </FormProvider>
