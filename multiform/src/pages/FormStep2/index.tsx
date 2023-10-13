@@ -3,6 +3,7 @@ import * as C from './styles';
 import { Theme } from '../../components/Theme';
 import { FormActions, useForm } from '../../contexts/FormContext';
 import { ChangeEvent, useEffect } from 'react';
+import { SelectOption } from '../../components/SelectOption';
 
 export const FormStep2 = () => {
   const navigate = useNavigate();
@@ -32,7 +33,17 @@ export const FormStep2 = () => {
 
                 <hr />
 
+                <SelectOption 
+                    title="Sou iniciante"
+                    description="Comecei a programar a menos de 2 anos"
+                    icon="🥳"
+                />
 
+                <SelectOption 
+                    title="Sou programador"
+                    description="Já programo a 2 anos ou mais"
+                    icon="😎"
+                />
 
                 <button onClick={handleNextStep}>Próximo</button>
             </C.Container>
