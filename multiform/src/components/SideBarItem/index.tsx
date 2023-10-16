@@ -12,7 +12,14 @@ export const SideBarItem = ({ title, description, icon, path}: Props ) => {
     return(
         <C.Container>
             <Link to={path}>
-                
+                <C.Info>
+                    <C.Title>{title}</C.Title>
+                    <C.Description>{description}</C.Description>
+                </C.Info>
+                <C.IconArea>
+
+                </C.IconArea>
+                <C.Point></C.Point>
             </Link>
         </C.Container>
     )
