@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { FormStep1 } from './pages/FormStep1';
 import { FormStep2 } from './pages/FormStep2';
-import { FormStep3 } from './pages/FormStep3';
 import { FormProvider } from './contexts/FormContext';
+import { FormStep3 } from './pages/FormStep3';
 
 
 function App() {
